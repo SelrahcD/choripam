@@ -329,7 +329,7 @@ textarea, input[type="email"], input[type="text"] {
 
 textarea {
     height: 150px;
-    max-width: 100%;
+    max-width: 663px;
     }
 
 textarea:focus, input[type="email"]:focus, input[type="text"]:focus {
