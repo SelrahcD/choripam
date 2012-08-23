@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('config.php');
 
 /* Getting data from session */
 if(isset($_SESSION['errors']))
@@ -62,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 
 		/* Redirect */
-		header('Location: ' . $_SERVER['PHP_SELF']);
+		header('Location: ' . $_SERVER['REQUEST_URI']);
 	}
 	else {
 		header('Location: #contact');
@@ -129,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		<section class="mod" id="contact">
 			<h2>Contact</h2>
-			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+			<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
 				<fieldset>
 				<p class="input-container">
 					<label for="name">Name</label>
