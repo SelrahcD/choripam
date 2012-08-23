@@ -10,6 +10,7 @@ else $errors = array();
 if(isset($_SESSION['old']))
 	$old = $_SESSION['old'];
 
+/* Form params */
 $neededFields = array('name', 'email', 'message', 'subject');
 $messages = array(
 	'name'    => 'Name is missing',
@@ -81,15 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Chorip.am</title>
 	<meta name="viewport" content="width=device-width">
-	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<link rel="stylesheet" href="css/style.css" media="all">
-	<?php if(sizeof($errors)): ?>
-	<script>
-	window.onLoad = function(){
-		console.log('aaaa');
-	};
-	</script>
-	<?php endif; ?>
 </head>
 <body>
 	<div class="center w700p wrapper">
