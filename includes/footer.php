@@ -6,8 +6,8 @@
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', <?php echo $config['analytics-account']; ?>]);
-	  _gaq.push(['_setDomainName', <?php echo $config['analytics-domaine-name']; ?>]);
+	  _gaq.push(['_setAccount', '<?php echo $config['analytics-account']; ?>']);
+	  _gaq.push(['_setDomainName', '<?php echo $config['analytics-domaine-name']; ?>']);
 	  _gaq.push(['_trackPageview']);
 
 	  (function() {
