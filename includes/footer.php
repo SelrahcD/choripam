@@ -1,3 +1,4 @@
+<?php require_once('../includes/config.php'); ?>
 		<footer class="main-footer">
 			<p>&copy; 2012 Chorip.am</p>
 		</footer>
@@ -5,8 +6,8 @@
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-34322576-1']);
-	  _gaq.push(['_setDomainName', 'choripam.com']);
+	  _gaq.push(['_setAccount', <?php echo $config['analytics-account']; ?>]);
+	  _gaq.push(['_setDomainName', <?php echo $config['analytics-domaine-name']; ?>]);
 	  _gaq.push(['_trackPageview']);
 
 	  (function() {
