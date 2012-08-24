@@ -44,15 +44,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 		$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 		$subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-		$mail = $_POST['mail'];
+		$mail = $_POST['email'];
 
 		/* Creating alerts array */
 		$_SESSION['alerts'] = array();
 		
 		/* Setting mail header */
-		$headers = 'From: ' . $name . ' <' . $mail . '>'."\r\n";
+		$headers = 'From: ' . $name . ' <' . $mail . '>'."\r\n" .
+				   'Reply-To: ' . $mail . "\r\n" .
+				   'X-Mailer: PHP/' . phpversion();
 
-		if(mail($config['email'], $subject, wordwrap($message, 70), $headers)){
+		if(mail($config['email'], '[choripam-contact] '. $subject, wordwrap($message, 70), $headers)){
 			$_SESSION['alerts'][] = array('type' => 'info', 'msg' => 'You\'re email has been sent.');
 
 			/* Unset data we putted on session */
