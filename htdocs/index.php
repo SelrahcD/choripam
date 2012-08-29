@@ -93,6 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<section class="mod left w300p">
 				<h2>You can find me on ...</h2>
 				<ul class="elsewhere-links">
+					<li><a href="https://remixjobs.com/cv/Charles-Desneuf/36021">RemixJob</a></li>
 					<li><a href="https://twitter.com/Selrahcd">Twitter</a></li>
 					<li><a href="https://github.com/SelrahcD">Github</a></li>
 					<li><a href="http://www.lastfm.fr/user/SelrahcD">Last.fm</a></li>
@@ -106,6 +107,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				</div>
 			</section>
 		</div>
+		<section class="mod">
+			<h2>You, music lova ?</h2>
+			<p>If you have very bad music taste you can check on <a href="http://lacremedelacreme.chorip.am">La crème de la crème</a>, a simple website I made.</p>
+		</section>
 
 		<section class="mod" id="contact">
 			<h2>Contact</h2>
